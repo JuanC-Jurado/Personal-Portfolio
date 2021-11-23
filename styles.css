@@ -7,12 +7,23 @@
   body{
       background-image: url();
   }
+
+  #header{
+    position: fixed;
+  }
   
+  #main-header{
+    height: 4em;
+  }
+
   #navbar{
     background: rgba(20, 20, 20, 0.3);
-    height: 4em;
+    height: 2em;
     width: 100vw;
-    position: fixed;
+  }
+  
+  #navbar li{
+    display: inline;
   }
   
   #welcome-section{
@@ -35,11 +46,9 @@
   
   ul{
     position: absolute;
-    top:50%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    top: 92%;
+    transform: translate(-50%, -100%);
     max-width: 50%;
     text-align: center;
-    
-    border: 1px solid;
   }
