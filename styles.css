@@ -131,9 +131,7 @@ body::-webkit-scrollbar-track{
 .text-about{
     display: flex;
     height: min-content;
-    align-items: space-around;
-    justify-content: space-around;
-
+  text-align: justify;
   }
 
 .text-about p{
