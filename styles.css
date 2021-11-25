@@ -5,23 +5,55 @@
     padding: 0;
     margin: 0;
     box-sizing: 0;
+
+    font-family: sans-serif;
   }
 
-  #header{
+img{
+  width: 100%;
+}
+
+body{
+    background-image: url(img/scrolling-background.jpg);
+    background-attachment: fixed;
+    background-position: top;
+    background-size: cover;
+    
+  }
+
+  body::-webkit-scrollbar{
+    width: 5px;
+    background: rgb(50,50,50);
+  }
+
+body::-webkit-scrollbar-thumb{
+    background: #fff;
+    border-radius: 3px;
+  }
+
+body::-webkit-scrollbar-track{
+    display: none;
+  }
+
+  /* Header Bar */
+#header{
     position: fixed;
-    background: rgba(256, 256, 256, 0.1);
+    background: rgba(256, 256, 256, 0.4);
     backdrop-filter: blur(3px);
     width: 100vw;
 
     display: grid;
     grid-template-columns: 1fr 1.5fr;
+    z-index: 1000;
+    box-shadow: rgb(50,50,50) 0 0 15px;
   }
   
-  #main-header{
+#main-header{
     height: 4em;
   }
 
-  #nav-links{
+  /* Navegation Section */
+#nav-links{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     list-style: none;
@@ -29,29 +61,29 @@
     height: 100%;
   }
 
-  #nav-links a{
+#nav-links a{
     font-family: 'Oswald', sans-serif;
     text-decoration: none;
     text-align: center;
-    color: #fff;
+    color: rgb(49, 49, 49);
     font-size: 22px;
-    font-weight: 200;
+    font-weight: 400;
     
     float: left;
     transform: translateY(20%);
 
     display: inline-block;
     padding: 0.3em 2em;
-    border-radius: 20%;
   }
 
-  #nav-links a:hover{
-    border-bottom: 2px solid #fff;
+#nav-links a:hover{
+    border-bottom: 2px solid rgb(49, 49, 49);
 
     transition: linear 150ms;
   }
   
-  #welcome-section{
+  /* Welcome Section */
+#welcome-section{
     height: 100vh;
     background-image: url(img/welcome-background.jpg);
     background-size: cover;
@@ -59,7 +91,7 @@
     min-height: 20px;
   }
   
-  #welcome-card{
+#welcome-card{
     position: absolute;
     top:50%;
     left: 50%;
@@ -73,11 +105,78 @@
     color: #fff;
   }
 
-  #welcome-card h1{
+#welcome-card h1{
     font-family: 'Oswald', sans-serif;
     font-weight: 300;
-    font-size: 32px;
+    font-size: 45px;
   }
-  #welcome-card p{
+#welcome-card p{
     font-family: 'Monserrat', sans-serif;
   }
+
+  /* About Me Section */
+#about{
+    height: 50vh;
+    background: #fff;
+    padding: 2em;
+    box-shadow: rgb(0, 0, 0) 0 0 30px;
+  }
+
+#about-in-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+  }
+
+.text-about{
+    display: flex;
+    height: min-content;
+    align-items: space-around;
+    justify-content: space-around;
+
+  }
+
+.text-about p{
+    line-height: 1.5em;
+    font-size: 20px;
+    text-justify:newspaper;
+  }
+
+#about-img {
+  }
+
+#about-img figure{
+    margin: 0 auto;
+    width: 50%;
+    min-width: 150px;
+  }
+
+#about-img img{
+    border-radius: 100%;
+    box-shadow: rgb(49, 49, 49) 0 0 10px;
+  }
+
+.title{
+    font-size: 50px;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 400;
+    width: max-content;
+}
+
+  /* Projects Section */
+#projects{
+   height: 75vh; 
+  }
+
+  /* Contact Section */
+#contact{
+    height: 60vh;
+    background: #fff;
+  }
+
+  /* Footer */
+footer{
+  background: #ccc;
+  color: #fff;
+  height: 50px;
+}
