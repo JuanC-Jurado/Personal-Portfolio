@@ -71,16 +71,14 @@ body::-webkit-scrollbar-track{
     
     float: left;
     transform: translateY(20%);
-
-    display: inline-block;
     padding: 0.3em 2em;
   }
 
 #nav-links a:hover{
-    border-bottom: 2px solid rgb(49, 49, 49);
-
-    transition: linear 150ms;
-  }
+  background: rgba(49, 49, 49, 0.111);
+  transition: linear 150ms;
+  box-shadow: rgb(49, 49, 49) 0 0 5px;
+}
   
   /* Welcome Section */
 #welcome-section{
@@ -131,7 +129,7 @@ body::-webkit-scrollbar-track{
 .text-about{
     display: flex;
     height: min-content;
-  text-align: justify;
+    text-align: justify;
   }
 
 .text-about p{
