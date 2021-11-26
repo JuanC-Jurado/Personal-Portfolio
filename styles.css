@@ -47,15 +47,13 @@ body::-webkit-scrollbar-track{
     align-items: center;
     z-index: 1000;
     box-shadow: rgb(50,50,50) 0 0 15px;
-    height: 5.5em;
+    height: 6em;
   }
   
 #main-header{
-    padding-left: 5vw;
-  }
-
-  #logo{
-    width: 10%;
+    padding-left: 2vw;
+    width: 130px;
+    min-width: 100px;
   }
 
   /* Navegation Section */
@@ -72,7 +70,7 @@ body::-webkit-scrollbar-track{
     text-decoration: none;
     text-align: center;
     color: rgb(49, 49, 49);
-    font-size: 22px;
+    font-size: 18px;
     font-weight: 400;
     
     float: left;
@@ -143,9 +141,6 @@ body::-webkit-scrollbar-track{
     text-justify:newspaper;
   }
 
-#about-img {
-  }
-
 #about-img figure{
     margin: 0 auto;
     width: 50%;
@@ -166,8 +161,78 @@ body::-webkit-scrollbar-track{
 
   /* Projects Section */
 #projects{
-   height: 75vh; 
+   height: 85vh;
+   padding: 2em;
   }
+
+#projects .title{
+  color: #fff;
+  margin-bottom: 1em;
+}
+
+#project-in-container{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  justify-items: center;
+}
+
+.project-tile{
+  display: flex;
+  flex-direction: column-reverse;
+
+  width: 70%;
+  padding: 0.5em;
+  background: #fff;
+  border-radius: 10px;
+}
+
+.project-title{
+  font-family: "Oswald", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  text-decoration: none;
+  color: #313131;
+}
+.project-tile h3{
+  text-align: center;
+}
+
+.project-tile h3:hover{
+  text-decoration: underline #313131;
+}
+
+.project-description{
+  margin-top: 1em;
+
+  font-family: 'Monserrat', sans-serif;
+  font-size: 16px;
+}
+
+#see-more{
+  display: block;
+  margin-top: 3em;
+  
+  text-align: center;
+  padding: 0.5em 3em;
+
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(3px);
+
+  color: #fff;
+  font-size: 20px;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 300;
+  text-decoration: none;
+}
+
+#see-more:hover{
+  border: 2px solid #fff;
+}
 
   /* Contact Section */
 #contact{
