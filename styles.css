@@ -4,7 +4,7 @@
 *{
     padding: 0;
     margin: 0;
-    box-sizing: 0;
+    box-sizing: border-box;
 
     font-family: sans-serif;
   }
@@ -47,13 +47,13 @@ body::-webkit-scrollbar-track{
     align-items: center;
     z-index: 1000;
     box-shadow: rgb(50,50,50) 0 0 15px;
-    height: 6em;
+    height: 4em;
   }
   
 #main-header{
     padding-left: 2vw;
-    width: 130px;
-    min-width: 100px;
+    width: 100px;
+    min-width: 50px;
   }
 
   /* Navegation Section */
@@ -117,7 +117,7 @@ body::-webkit-scrollbar-track{
 
   /* About Me Section */
 #about{
-    height: 50vh;
+    height: 60vh;
     background: #fff;
     padding: 2em;
     box-shadow: rgb(0, 0, 0) 0 0 30px;
@@ -161,7 +161,7 @@ body::-webkit-scrollbar-track{
 
   /* Projects Section */
 #projects{
-   height: 85vh;
+   height: 93vh;
    padding: 2em;
   }
 
@@ -189,8 +189,8 @@ body::-webkit-scrollbar-track{
 
 .project-title{
   font-family: "Oswald", sans-serif;
-  font-size: 20px;
-  font-weight: 400;
+  font-size: 28px;
+  font-weight: 500;
   text-decoration: none;
   color: #313131;
 }
@@ -203,10 +203,24 @@ body::-webkit-scrollbar-track{
 }
 
 .project-description{
-  margin-top: 1em;
+  margin: 0.5em;
 
   font-family: 'Monserrat', sans-serif;
   font-size: 16px;
+  font-weight: 500;
+  color: #616161;
+  text-align: center;
+}
+
+.project-image img{
+  border-radius: 5px;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 0.5em;
+}
+
+.project-image img:hover{
+  box-shadow: #313131 0 0 5px;
 }
 
 #see-more{
@@ -214,7 +228,7 @@ body::-webkit-scrollbar-track{
   margin-top: 3em;
   
   text-align: center;
-  padding: 0.5em 3em;
+  padding: 0.2em 3em;
 
   position: absolute;
   left: 50%;
@@ -231,14 +245,60 @@ body::-webkit-scrollbar-track{
 }
 
 #see-more:hover{
-  border: 2px solid #fff;
+  transition: linear 100ms;
+  box-shadow: #000 0 0 10px;
+  padding: 0.2em 3.5em;
+  text-decoration: underline;
 }
 
   /* Contact Section */
 #contact{
     height: 60vh;
     background: #fff;
+    padding: 2em;
   }
+
+#social-cards{
+  margin: 1em auto 1em;
+  width: 60%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  align-items: center;
+  justify-items: center;
+  font-size: 24px;
+}
+
+#github{
+  background: rgb(122, 48, 140);
+}
+
+#profile-link{
+  background: #090922;
+}
+
+#instagram{
+  background: #fb0;
+}
+
+#gmail{
+  background: #c33;
+
+}
+
+.social-i-card{
+  padding-top: 1em;
+  height: 10vh;
+  width: 100%;
+  text-align: center;
+  color: #fff;
+}
+.social-i-card:hover{
+  position: relative;
+  width: 110%;
+  height: 110%;
+  border-radius: 5px;
+  transition: linear 150ms;
+}
 
   /* Footer */
 footer{
