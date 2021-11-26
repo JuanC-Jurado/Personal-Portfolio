@@ -130,8 +130,8 @@ body::-webkit-scrollbar-track{
   }
 
 .text-about{
-    display: flex;
     height: min-content;
+    align-self: baseline;
     text-align: justify;
   }
 
@@ -140,6 +140,9 @@ body::-webkit-scrollbar-track{
     font-size: 20px;
     text-justify:newspaper;
   }
+.text-about #important{
+  font-weight: normal;
+}
 
 #about-img figure{
     margin: 0 auto;
@@ -157,6 +160,7 @@ body::-webkit-scrollbar-track{
     font-family: 'Oswald', sans-serif;
     font-weight: 400;
     width: max-content;
+    margin-bottom: 0.5em;
 }
 
   /* Projects Section */
@@ -185,6 +189,7 @@ body::-webkit-scrollbar-track{
   padding: 0.5em;
   background: #fff;
   border-radius: 10px;
+  box-shadow: rgb(0, 0, 0) 0 0 30px;
 }
 
 .project-title{
@@ -236,6 +241,7 @@ body::-webkit-scrollbar-track{
   border-radius: 5px;
   background: rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(3px);
+  box-shadow: rgb(0, 0, 0) 0 0 10px;
 
   color: #fff;
   font-size: 20px;
@@ -253,9 +259,10 @@ body::-webkit-scrollbar-track{
 
   /* Contact Section */
 #contact{
-    height: 60vh;
+    height: 35vh;
     background: #fff;
     padding: 2em;
+    box-shadow: rgb(0, 0, 0) 0 0 30px;
   }
 
 #social-cards{
@@ -302,7 +309,11 @@ body::-webkit-scrollbar-track{
 
   /* Footer */
 footer{
-  background: #ccc;
   color: #fff;
-  height: 50px;
+  font-family: 'Monserrat', sans-serif;
+
+  height: 10vh;
+  display: grid;
+  align-items: center;
+  justify-items: center;
 }
