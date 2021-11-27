@@ -94,7 +94,7 @@ body::-webkit-scrollbar-track{
   
 #welcome-card{
     position: absolute;
-    top:50%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
     max-width: 50%;
@@ -112,12 +112,12 @@ body::-webkit-scrollbar-track{
     font-size: 45px;
   }
 #welcome-card p{
-    font-family: 'Monserrat', sans-serif;
+    font-family: sans-serif;
   }
 
   /* About Me Section */
 #about{
-    height: 60vh;
+    height: max-content;
     background: #fff;
     padding: 2em;
     box-shadow: rgb(0, 0, 0) 0 0 30px;
@@ -165,8 +165,8 @@ body::-webkit-scrollbar-track{
 
   /* Projects Section */
 #projects{
-   height: 93vh;
-   padding: 2em;
+  max-height: min-content;
+  padding: 2em;
   }
 
 #projects .title{
@@ -231,13 +231,14 @@ body::-webkit-scrollbar-track{
 #see-more{
   display: block;
   margin-top: 3em;
+  margin-left: auto;
+  margin-right: auto;
+  width: 30%;
+  min-width: 300px;
   
   text-align: center;
   padding: 0.2em 3em;
 
-  position: absolute;
-  left: 50%;
-  transform: translate(-50%);
   border-radius: 5px;
   background: rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(3px);
@@ -259,7 +260,7 @@ body::-webkit-scrollbar-track{
 
   /* Contact Section */
 #contact{
-    height: 35vh;
+    height: max-content;
     background: #fff;
     padding: 2em;
     box-shadow: rgb(0, 0, 0) 0 0 30px;
@@ -316,4 +317,86 @@ footer{
   display: grid;
   align-items: center;
   justify-items: center;
+}
+
+@media (max-width: 768px) {
+  #navbar{
+    display: none;
+  }
+
+  #main-header{
+    margin-left: 2em;
+  }
+
+  #about-in-container{
+    grid-template-columns: 1fr;
+  }
+
+
+  #about-img{
+    width: 100px;
+    margin: 1em auto;
+  }
+
+  #project-in-container{
+    grid-template-columns: 1fr;
+    gap: 3em;
+  }
+
+  #social-cards{
+    width: 90%;
+  }
+
+  footer{
+    height: 5vh;
+  }
+}
+
+@media (max-width: 425px){
+  #header{
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+
+  .title{
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+
+  #welcome-card h1{
+    font-size: 38px;
+  }
+
+  #welcome-card p{
+    font-size: 14px;
+    font-weight: 200;
+
+    margin-top: 1em;
+  }
+
+  .project-tile{
+    width: 100%;
+  }
+
+  #social-cards{
+    width: 75%;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1em;
+  }
+
+  .social-i-card{
+    border-radius: 5px;
+  }
+}
+
+@media (max-width: 320px){
+  #see-more{
+    min-width: 80vw;
+  }
+
+  #social-cards{
+    width: 90%;
+  }
 }
