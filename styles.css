@@ -7,7 +7,11 @@
     box-sizing: border-box;
 
     font-family: sans-serif;
-  }
+}
+
+html{
+  scroll-behavior: smooth;
+}
 
 img{
   width: 100%;
@@ -18,7 +22,6 @@ body{
     background-attachment: fixed;
     background-position: top;
     background-size: cover;
-    
   }
 
   body::-webkit-scrollbar{
@@ -45,7 +48,7 @@ body::-webkit-scrollbar-track{
     display: grid;
     grid-template-columns: 1fr 1.5fr;
     align-items: center;
-    z-index: 1000;
+    z-index: 100;
     box-shadow: rgb(50,50,50) 0 0 15px;
     height: 4em;
   }
@@ -57,6 +60,15 @@ body::-webkit-scrollbar-track{
   }
 
   /* Navegation Section */
+#title-navbar{
+  display: none;
+}
+#close-btn{
+  display: none;
+}
+#open-btn{
+  display: none;
+}
 #nav-links{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -75,6 +87,7 @@ body::-webkit-scrollbar-track{
     
     float: left;
     padding: 0.3em 2em;
+    z-index: 101;
   }
 
 #nav-links a:hover{
@@ -321,7 +334,60 @@ footer{
 
 @media (max-width: 768px) {
   #navbar{
-    display: none;
+    position: fixed;
+    right: -85vw;
+    top: 0px;
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(3px);
+    height: 100vh;
+    width: 70vw;
+    box-shadow: rgb(79, 79, 79) 0 0 5px;
+    transition: linear 200ms;
+  }
+
+  #open-btn{
+    position: absolute;
+    right: 1em;
+    display: inline;
+    font-size: 32px;
+    text-shadow: rgba(255, 255, 255, 0.3) 0 0 5px;
+    color: #616161;
+    text-align: end;
+  }
+
+  #close-btn{
+    display: block;
+    position: absolute;
+    top: 1em;
+    left: 1em;
+    padding: 0.3em;
+    border-radius: 5px;
+    background-color: #c33;
+    color: #fff;
+
+  }
+
+  #title-navbar{
+    display: block;
+    text-align: center;
+    margin: 0.5em auto;
+    font-size: 32px;
+    font-weight: 300;
+  }
+
+  #nav-links{
+    grid-template-columns: 1fr;
+    height: max-content;
+    gap: 1em;
+    margin-left: 1em;
+  }
+  
+  #nav-links a{
+    display: block;
+    width: 40vw;
+    margin: 0.5em auto;
+    text-align: left;
+    font-size: 24px;
   }
 
   #main-header{
@@ -353,9 +419,8 @@ footer{
 }
 
 @media (max-width: 425px){
-  #header{
-    grid-template-columns: 1fr;
-    justify-items: center;
+  #nav-links a{
+    width: 70vw;
   }
 
   .title{
